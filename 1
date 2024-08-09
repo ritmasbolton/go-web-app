@@ -1,0 +1,36 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"go-web-app","app.kubernetes.io/instance":"go-web-app"},"name":"go-web-app","namespace":"default"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":8080}],"selector":{"app":"go-web-app"},"type":"ClusterIP"}}
+  creationTimestamp: "2024-08-09T15:15:50Z"
+  labels:
+    app: go-web-app
+    app.kubernetes.io/instance: go-web-app
+  name: go-web-app
+  namespace: default
+  resourceVersion: "30505"
+  uid: d5bebf16-a215-44b6-a1b5-d1bbe3b4a593
+spec:
+  clusterIP: 10.100.153.157
+  clusterIPs:
+  - 10.100.153.157
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: go-web-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
