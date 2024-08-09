@@ -8,7 +8,7 @@ image:
   repository: ritmasbolton/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10320059897"
+  tag: "10321694067"
 
 ingress:
   enabled: false
